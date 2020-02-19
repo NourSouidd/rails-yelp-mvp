@@ -5,10 +5,11 @@
 
     <% @restaurants.each do |r| %>
      <li><%= link_to r.name, restaurant_path(r) %></li>
+     <p><%= link_to "Delete", restaurants_path(@restaurant), method: :delete %></p>
     <% end %>
   </ul>
 <br>
 
-<%= link_to 'Add a new Restaurant',  %>
+<%= link_to 'Add a new Restaurant', new_restaurant_path %>
 
 </div>
